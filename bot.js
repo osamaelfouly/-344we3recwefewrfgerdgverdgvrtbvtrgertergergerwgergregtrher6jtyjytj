@@ -334,7 +334,6 @@ client.on('message', message=> {
   .setTimestamp()
   .setThumbnail(message.author.iconURL) //ALPHA CODES
   .addField(':clock: مدة تشغيل البوت', 'Bot\'s uptime', true)
-  .addField(':runner: عدد السيرفرات:', `**${client.guilds.size}** servers`, true)
   .addField(':white_check_mark: مدة التشغيل:', dateString, true)
   .setColor(6583245); //ALPHA CODES
     message.channel.send({embed})
