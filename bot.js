@@ -338,6 +338,6 @@ client.on('message', message=> {
   .setColor(6583245); //ALPHA CODES
     message.channel.send({embed})
   .catch(console.error);
-}})
+});
 
 client.login(process.env.BOT_TOKEN);
