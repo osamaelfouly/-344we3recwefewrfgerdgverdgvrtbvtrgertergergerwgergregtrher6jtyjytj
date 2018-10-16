@@ -232,7 +232,7 @@ client.on('message', message =>{
 
 
 client.on("message", message => {
-  if(message.content.startsWith("=kill")) {
+  if(message.content.startsWith("!shutdown")) {
   if(message.author.id === "422829377139638273") {  
     message.channel.send('سيتم اطفاء البوت')
     process.kill(process.pid)
