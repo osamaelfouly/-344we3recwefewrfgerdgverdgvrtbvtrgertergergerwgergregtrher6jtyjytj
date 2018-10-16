@@ -240,8 +240,7 @@ client.on("message", message => {
 }})
 
 
-const Discord = require('discord.js');
-//ALPHA CODES
+
 client.on('message', message=> {
   if(message.content.startsWith('!uptime')) { 
     let ms = client.uptime; 
