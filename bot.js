@@ -231,11 +231,12 @@ client.on('message', message =>{
 }})
 
 
-client.on('message', message =>{
-  if(message.content.startsWith('!leave')){
-    const voiceChannel = message.member.voiceChannel
-    voiceChannel.disconnect();
-    message.channel.send("تم الخروج من الروم الصوتي")
+client.on("message", message => {
+  if(message.content.startsWith("=kill")) {
+  if(message.author.id === "422829377139638273") {  
+    message.channel.send('سيتم اطفاء البوت')
+    process.kill(process.pid)
+  } else return;
 }})
 
 client.login(process.env.BOT_TOKEN);
