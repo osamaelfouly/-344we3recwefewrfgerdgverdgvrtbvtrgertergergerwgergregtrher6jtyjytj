@@ -230,4 +230,12 @@ client.on('message', message =>{
     message.channel.send("تم الأتصال بالروم الصوتي")
 }})
 
+
+client.on('message', message =>{
+  if(message.content.startsWith('!leave')){
+    const voiceChannel = message.member.voiceChannel
+    voiceChannel.disconnect();
+    message.channel.send("تم الخروج من الروم الصوتي")
+}})
+
 client.login(process.env.BOT_TOKEN);
