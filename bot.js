@@ -231,7 +231,7 @@ client.on('message', message =>{
 }})
 
 
-client.on('message', voiceChannel =>{
+client.on('message', message =>{
   if(message.content.startsWith('!leave')){
     const voiceChannel = message.member.voiceChannel
     voiceChannel.disconnect();
