@@ -233,7 +233,7 @@ client.on('message', message =>{
 
 client.on('message', message =>{
   if(message.content.startsWith('!leave')){
-    function voiceChannel = message.member.voiceChannel
+    const voiceChannel = message.member.voiceChannel
     voiceChannel.disconnect();
     message.channel.send("تم الخروج من الروم الصوتي")
 }})
