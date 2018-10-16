@@ -213,6 +213,5 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
 
-client.login('NDk1Njg2NDIyOTA1MjI1MjUx.DpFrtA.F-P6EwRoP3nllqP1Zkr5Mw-235M');
 
 client.login(process.env.BOT_TOKEN);
