@@ -254,12 +254,20 @@ function play(connection, message, args) {
 }
 
 
-client.on('message', message =>{
-  if(message.content.startsWith('!join')){
-    const voiceChannel = message.member.voiceChannel
-    voiceChannel.join();
-    message.channel.send("تم الأتصال بالروم الصوتي")
-}})
+client.on('message', msg => {
+
+    if (msg.content == '!join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("501348057506381834").join();
+    });
 
 
 client.on("message", message => {
