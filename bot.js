@@ -57,15 +57,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 
 
-client.on('message', async msg => { 
-	if (msg.author.bot) return undefined;
-	if (!msg.content.startsWith(prefix)) return undefined;
-	const args = msg.content.split(' ');
-	const searchString = args.slice(1).join(' ');
-	const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
-	const serverQueue = queue.get(msg.guild.id);
-	let command = msg.content.toLowerCase().split(" ")[0];
-	command = command.slice(prefix.length)
+
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send('يجب توآجد حضرتك بروم صوتي .');
