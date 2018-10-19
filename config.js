@@ -2,7 +2,7 @@ const cfg = [];
 
 // Discord config, see the README for help
 cfg.discord = {
-    token: 'NDkzMzgwNzUzMDUzMTg4MTE2.DqueZw.kxyzRWwFXUKkp2T0BUrTVRi5EOo',
+    token: 'Token Here',
     prefix: '!',
     admins: [
         '422829377139638273' // Your ID Here
