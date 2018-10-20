@@ -391,6 +391,8 @@ ${prefix}\`\ setname \`\ - change the bot name
 
  }
 });      
+
+var servers = {};
 function play(connection, message, args) {
   var server = servers[message.guild.id];
   server.dispatcher = connection.playStream(YTDL(args[0]), {filter: "audioonly"});
