@@ -394,7 +394,7 @@ ${prefix}\`\ setname \`\ - change the bot name
 
 client.on('message', msg => {
 
-    if (msg.content == '!join') {
+    if (msg.content == '?join') {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
@@ -402,9 +402,10 @@ client.on('message', msg => {
      }
     }
 }
-}
+})
 client.on('ready', () => {
     client.channels.get("486311876356210689").join();
 });
+
   
 client.login(process.env.BOT_TOKEN);
