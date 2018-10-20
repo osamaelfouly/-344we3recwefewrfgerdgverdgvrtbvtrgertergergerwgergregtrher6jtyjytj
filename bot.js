@@ -20,6 +20,8 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
+var servers = {};
+
 const prefix = "!";
 /////////////////////////
 ////////////////////////
@@ -399,7 +401,7 @@ function play(connection, message, args) {
     if (server.queue[0]) play(connection, message);
     else connection.disconnect();
   });
-}
+
 
 client.on('message', msg => {
 
