@@ -12,8 +12,6 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 
 const queue = new Map();
 
-const nodeopus = require('node-opus');
-
 const ffmpeg = require('ffmpeg');
 
 const ytdl = require('ytdl-core');
