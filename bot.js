@@ -30,6 +30,9 @@ const prefix = "!";
 /////////////////////////
 ////////////////////////
 
+
+let await
+
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
@@ -105,7 +108,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 	
-	client.on('message', msg => {
+
 
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
@@ -393,11 +396,8 @@ msg.react('💌')
 
 
 		
-
-client.on('message', msg => {
-
-
-    });		
+		
+		
 		
 		
 
