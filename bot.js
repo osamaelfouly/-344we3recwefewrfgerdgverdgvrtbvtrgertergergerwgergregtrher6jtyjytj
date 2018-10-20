@@ -402,7 +402,7 @@ client.on('message', msg => {
   server.dispatcher.on("end", function() {
     if (server.queue[0]) play(connection, message);
     else connection.disconnect();
-  });
+  }
 }
 
 
@@ -411,6 +411,6 @@ client.on('message', message =>{
     const voiceChannel = message.member.voiceChannel
     voiceChannel.join();
     message.channel.send("تم الأتصال بالروم الصوتي")
-}})
+});
   
 client.login(process.env.BOT_TOKEN);
