@@ -395,17 +395,22 @@ ${prefix}\`\ setname \`\ - change the bot name
 		
 client.on('message', msg => {
 
-    if (msg.content == '?join') {
-        if (msg.member.voiceChannel) {
-
-     if (msg.member.voiceChannel.joinable) {
-         msg.member.voiceChannel.join().then(msg.react('✅'));
-     }
-    }
+	function play(connection, message, args) {
+  var server = servers[message.guild.id];
+  server.dispatcher = connection.playStream(YTDL(args[0]), {filter: "audioonly"});
+  server.queue.shift();
+  server.dispatcher.on("end", function() {
+    if (server.queue[0]) play(connection, message);
+    else connection.disconnect();
+  });
 }
-})
-client.on('ready', () => {
-    client.channels.get("486311876356210689").join();
-    });
-    
+
+
+client.on('message', message =>{
+  if(message.content.startsWith('join')){
+    const voiceChannel = message.member.voiceChannel
+    voiceChannel.join();
+    message.channel.send("تم الأتصال بالروم الصوتي")
+}})
+  
 client.login(process.env.BOT_TOKEN);
