@@ -1,6 +1,0 @@
-token= NDkxMjY0NzQ3NzY1ODkxMDkz.DqyAjA.R8_iFZ6Y3X5nqfegBaxoE47zdmA
-owner= 422829377139638273 
-prefix= !
-game= Qudra server 
-stayinchannel=true 
-songinstatus=false 
