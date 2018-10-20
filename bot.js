@@ -4,8 +4,6 @@ const Util = require('discord.js');
 
 const getYoutubeID = require('get-youtube-id');
 
-const nodeopus = require('node-opus');
-
 const fetchVideoInfo = require('youtube-info');
 
 const YouTube = require('simple-youtube-api');
