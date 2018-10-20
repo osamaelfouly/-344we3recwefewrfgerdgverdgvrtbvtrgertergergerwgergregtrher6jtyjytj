@@ -400,7 +400,7 @@ function play(connection, message, args) {
   server.dispatcher.on("end", function() {
     if (server.queue[0]) play(connection, message);
     else connection.disconnect();
-  });
+  }
 
 
 client.on('message', msg => {
@@ -416,7 +416,6 @@ client.on('message', msg => {
 }
 client.on('ready', () => {
     client.channels.get("486311876356210689").join();
-})
-
+});
   
 client.login(process.env.BOT_TOKEN);
