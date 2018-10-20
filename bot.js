@@ -392,17 +392,6 @@ ${prefix}\`\ setname \`\ - change the bot name
  }
 });      
 
-var servers = {};
-function play(connection, message, args) {
-  var server = servers[message.guild.id];
-  server.dispatcher = connection.playStream(YTDL(args[0]), {filter: "audioonly"});
-  server.queue.shift();
-  server.dispatcher.on("end", function() {
-    if (server.queue[0]) play(connection, message);
-    else connection.disconnect();
-  }
-		       }
-
 client.on('message', msg => {
 
     if (msg.content == '!join') {
