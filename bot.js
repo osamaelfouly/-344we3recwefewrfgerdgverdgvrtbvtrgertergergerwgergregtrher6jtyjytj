@@ -366,12 +366,12 @@ client.on('message', message => {
 client.login(process.env.BOT_TOKEN);
 
 
-bot.on('message', msg => {
+client.on('message', msg => {
  if (msg.content === "?help") {
 msg.channel.send('**Check your `Privat` To see the `commands` 🎶**');
 msg.react('💌')
  msg.author.sendMessage(`
-** ${bot.user.tag} Commands ** 
+** ${client.user.tag} Commands ** 
  
         =====  Commands: ===== 
 		 
