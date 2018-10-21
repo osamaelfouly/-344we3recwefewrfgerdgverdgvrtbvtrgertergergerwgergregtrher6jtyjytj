@@ -22,7 +22,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "!";
+const prefix = "1";
 
 var servers = {};
 function play(connection, message, args) {
@@ -400,7 +400,7 @@ client.on('message', message => {
 
 
 client.on('message', msg => {
- if (msg.content === "?help") {
+ if (msg.content === "1help") {
 msg.channel.send('**Check your `Privat` To see the `commands` 🎶**');
 msg.react('💌')
  msg.author.sendMessage(`
@@ -447,7 +447,7 @@ ${prefix}\`\ setname \`\ - change the bot name
 
 client.on('message', msg => {
 
-    if (msg.content == '?join') {
+    if (msg.content == '1join') {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
