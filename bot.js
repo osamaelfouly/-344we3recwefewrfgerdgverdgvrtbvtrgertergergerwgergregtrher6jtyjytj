@@ -460,5 +460,9 @@ client.on('ready', () => {
     client.channels.get("486311818646781954").join();
 });
 
+client.on('ready', () => {
+var x = client.channels.get("486309931050336257");
+if (x) x.join();
+});
   
 client.login(process.env.BOT_TOKEN);
